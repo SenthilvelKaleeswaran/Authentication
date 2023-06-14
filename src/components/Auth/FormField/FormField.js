@@ -37,13 +37,13 @@ const styles= StyleSheet.create({
     }
 })
 
-export const TextFormField = ({label,placeHolder,value}) => {
+export const TextField = ({label,placeHolder,value,onValueChange}) => {
 
-  const [fieldValue, setFieldvalue] = useState(value)
+  // const [fieldValue, setFieldvalue] = useState(value)
 
-  const onValueChange = (changedValue) =>{
-    setFieldvalue(changedValue)
-  }
+  // const onValueChange = (changedValue) =>{
+  //   setFieldvalue(changedValue)
+  // }
 
   return (
 
@@ -54,7 +54,7 @@ export const TextFormField = ({label,placeHolder,value}) => {
 
           <TextInput  
               style={styles.inputField}
-              value={fieldValue}
+              value={value}
               placeholder={placeHolder}
               onChangeText={onValueChange}
           />
@@ -65,13 +65,13 @@ export const TextFormField = ({label,placeHolder,value}) => {
   )
 }
 
-export const PasswordFormField = ({label,placeHolder,value}) => {
+export const PasswordField = ({label,placeHolder,value, onValueChange}) => {
 
-  const [fieldValue, setFieldvalue] = useState(value)
+  // const [fieldValue, setFieldvalue] = useState(value)
 
-  const onValueChange = (changedValue) =>{
-    setFieldvalue(changedValue)
-  }
+  // const onValueChange = (changedValue) =>{
+  //   setFieldvalue(changedValue)
+  // }
 
   return (
     <View style={styles.container}>
@@ -80,7 +80,7 @@ export const PasswordFormField = ({label,placeHolder,value}) => {
 
         <TextInput  
             style={styles.inputField}
-            value={fieldValue}
+            value={value}
             placeholder={placeHolder}
             onChangeText={onValueChange}
             secureTextEntry={true}
